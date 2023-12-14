@@ -43,5 +43,18 @@ module.exports = {
         */
 
             return res.json({foo: "b ar"});
-    }
+    },
+
+    liveTracking: async (req, res , next) =>{
+        const mockLiveTracking = {
+            userId: 2, // Replace with an actual UUID
+            origin: 'Origin City',
+            destination: 'Destination City',
+            product: 'Product Name',
+            estimatedArrival: new Date(), // Replace with an actual timestamp
+          };
+       const livetracking = await db.livetracking.create(req.body);
+
+       return res.json(livetracking);
+    },
 }
