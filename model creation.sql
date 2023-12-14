@@ -1,0 +1,16 @@
+CREATE SCHEMA IF NOT EXISTS `tomas-service`;
+
+CREATE TABLE IF NOT EXISTS `data` (
+    id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    name VARCHAR(255) NOT NULL,
+    address VARCHAR(255) NOT NULL,
+    street VARCHAR(255) NOT NULL,
+    postalCode VARCHAR(255) NOT NULL,
+    city VARCHAR(255) NOT NULL,
+    country VARCHAR(255) NOT NULL,
+    phone VARCHAR(255) NOT NULL,
+    ucoQuantity BOOLEAN NOT NULL,
+    ucoDestinatary VARCHAR(255) NOT NULL,
+    date VARCHAR(255) NOT NULL,
+    digitalSignature VARCHAR(255) NOT NULL
+);
